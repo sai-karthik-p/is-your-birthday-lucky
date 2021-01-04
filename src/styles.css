@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 
 body {
+  box-sizing: border-box;
   font-family: "Kadwa", serif;
   background-color: #ffe2d1;
   margin: 0px;
@@ -19,7 +20,7 @@ nav {
   border-bottom-right-radius: 0.5rem;
 }
 
-div {
+nav div {
   font-size: larger;
   padding: 0.5rem;
   text-align: center;
@@ -31,11 +32,11 @@ a {
   color: #5e4c5a;
 }
 
-ul {
+.list-non-bullet {
   text-align: right;
 }
 
-li {
+.list-item-inline {
   list-style: none;
   display: inline;
   padding: 1rem;
@@ -45,11 +46,9 @@ input {
   display: block;
   border: 2px solid #5e4c5a;
   color: white;
-  font-size: 1.4rem;
   padding: 0.6rem;
   border-bottom-right-radius: 0.5rem;
   height: 10vh;
-  width: 50%;
   margin: auto;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -58,9 +57,24 @@ input {
   text-align: center;
 }
 
+input[type='date'] {
+  font-size: 1.5rem;
+}
+
+/* Remove spinner from input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 input::placeholder {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -85,29 +99,44 @@ button:hover {
   background-color: #55917f;
 }
 
-#ouput {
+#output {
   margin: 1rem;
+  font-size: xx-large;
+  padding: 0.5rem;
+  text-align: center;
+  margin: auto;
 }
 
 #gif-output {
   height: 360px;
-  margin: 12px;
   max-width: 95%;
   border: 0;
   padding: 0;
-}
-
-footer {
-  background-color: #e1f0c4;
-  border: 0;
-  padding: 0;
-  color: #5e4c5a;
-  font-weight: bolder;
-  border-top: #55917f 2px solid;
-  border-top-left-radius: 0.5rem;
-  border-left: #55917f 2px solid;
-}
-
-footer p {
+  margin: auto;
   text-align: center;
+}
+
+.footer {
+  background-color: #e1f0c4;
+  padding: 2rem 1rem;
+  color: #5e4c5a;
+  text-align: center;
+  border-top-left-radius: 1rem;
+  border-top: #55917f 2px solid;
+  border-left: #55917f 2px solid;
+  margin-top: 1rem;
+}
+
+.footer .link {
+  color: black;
+  font-weight: bold;
+}
+
+.footer .footer-header {
+  font-weight: bold;
+  font-size: large;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
 }

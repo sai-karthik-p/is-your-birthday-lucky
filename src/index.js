@@ -17,10 +17,10 @@ function calculate(n) {
 
   if (remainder === 0) {
     output.innerText = "Your Birthday is LUCKY!";
-    gifOutput.innerHTML = `<iframe src="https://giphy.com/embed/LWhLL32XDmcJhXTHVu" width="350" height="360" frameBorder="0" class="giphy-embed"></iframe>`;
+    gifOutput.innerHTML = `<iframe src="https://giphy.com/embed/LWhLL32XDmcJhXTHVu" width="255" height="360" frameBorder="0" class="giphy-embed"></iframe>`;
   } else {
     output.innerText = "Oops! No luck.";
-    gifOutput.innerHTML = `<iframe src="https://giphy.com/embed/26tOXgoz0WNQhwb04" width="350" height="360" frameBorder="0" class="giphy-embed"></iframe>`;
+    gifOutput.innerHTML = `<iframe src="https://giphy.com/embed/26tOXgoz0WNQhwb04" width="255" height="360" frameBorder="0" class="giphy-embed"></iframe>`;
   }
 }
 
